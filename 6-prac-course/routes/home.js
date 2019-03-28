@@ -1,7 +1,7 @@
 const router = require('express').Router();
 
 router.get('/', (req, res) => {
-  res.send({ message: 'Hello World' });
+  res.render('index-template', { title: 'Rendered by PUG', message: 'Hello World' });
 });
 
 // For all unsupported operations send 405: Method not allowed

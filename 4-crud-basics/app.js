@@ -1,6 +1,7 @@
 // Imports
 const express = require('express');
 const morgan = require('morgan');
+const config = require('config');
 const bodyParser = require('body-parser');
 const Joi = require('joi');
 
