@@ -1,7 +1,17 @@
 const router = require('express').Router();
 
 router.get('/', (req, res) => {
-  res.render('index-template', { title: 'Rendered by PUG', message: 'Hello World' });
+  const indexData = {
+    title: {
+      label: 'Rendered by ',
+      value: 'PUG'
+    },
+    message: {
+      label: 'Hello',
+      value: 'World'
+    }
+  };
+  res.render('index-template', indexData);
 });
 
 // For all unsupported operations send 405: Method not allowed
